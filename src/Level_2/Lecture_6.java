@@ -1,5 +1,7 @@
 package Level_2;
 
+import java.util.Scanner;
+
 public class Lecture_6 {
   public static void main(String[] args) {
     String s1 = "It", s2 = "Just", s3 = "Do";
@@ -71,5 +73,61 @@ class Quest_6_7 {
     System.out.println(("TITLE: " + title).toLowerCase());
     System.out.println(("DEGREE: " + degree).toLowerCase());
     System.out.println(("CAREER: " + career).toLowerCase());
+  }
+}
+
+class Test_Quest_6_8 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner("Люблю тебя, Петра творенье,\n" +
+            "Люблю твой строгий, стройный вид,\n" +
+            "Невы державное теченье,\n" +
+            "Береговой ее гранит");
+    String s = scanner.nextLine();
+    System.out.println(s);
+    s = scanner.nextLine();
+    System.out.println(s);
+    s = scanner.nextLine();
+    System.out.println(s);
+    s = scanner.nextLine();
+    System.out.println(s);
+  }
+}
+
+class Test_Quest_6_9 {
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Введите число:");
+    if (sc.hasNextInt()) {
+      int number = sc.nextInt();
+      System.out.println("Спасибо! Вы ввели число " + number);
+    } else {
+      System.out.println("Извините, но это явно не число. Перезапустите программу и попробуйте снова!");
+    }
+
+  }
+}
+
+class Test_Quest_6_10 {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner("На голой ветке'" +
+            "Ворон сидит одиноко.'" +
+            "Осенний вечер." +
+            "''***''" +
+            "В небе такая луна,'" +
+            "Словно дерево спилено под корень:'" +
+            "Белеет свежий срез." +
+            "''***''" +
+            "Как разлилась река!'" +
+            "Цапля бредет на коротких ножках,'" +
+            "По колено в воде.");
+
+    scan.useDelimiter("'");
+
+    while (scan.hasNext()) {
+      System.out.println(scan.next());
+    }
+
+    scan.close();
   }
 }
